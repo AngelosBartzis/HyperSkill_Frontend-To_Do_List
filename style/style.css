@@ -1,0 +1,122 @@
+/* Center the whole page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+/* Container for the input and task list */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Input and button styles */
+#input-task {
+    padding: 10px;
+    width: calc(100% - 24px);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-task-button {
+    padding: 10px;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-task-button:hover {
+    background-color: #45a049;
+}
+
+/* Task list styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Task name styling */
+span.task {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* Completed task styling */
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Custom checkbox styling */
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #007bff;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✓';
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete-btn::before {
+    content: '✕'; /* X character */
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
